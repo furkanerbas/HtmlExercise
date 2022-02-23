@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Hover</title>
+    <style>
+
+        /* değişken tanımlamak için :root u kullanırız.
+        tanımlanan değişkenler ve değişkenlere verilen değerler
+        diğer alanlarda var özelliği kullanılarak çağırılabilir. */
+    :root{
+        --box-color:gray;
+        --box-color1:gray;
+        --box-color2:gray;
+        --box-color-hover:green;
+        --box-color1-hover:blue;
+        --box-color2-hover:purple;
+    }
+    .box{
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-left:10px;
+        transition: .3s;
+        background-color: var(--box-color);
+    }
+    .green:hover{
+        background-color: var(--box-color-hover);
+    }
+
+    .blue:hover{
+        background-color: var(--box-color1-hover);
+    }
+
+    .purple:hover{
+        background-color: var(--box-color2-hover);
+    }
+</style>
+</head>
+<body>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box purple"></div>
+</body>
+</html>

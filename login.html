@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="tr.ico">
+    <style>
+        :root{
+            --content-backcolor:rgba(163, 177, 192, 0.247);
+            --icon-color:rgb(68, 67, 67);
+        }
+        *{
+            padding: 0;
+            margin:0;
+        }
+        body
+        {
+            background-image: url('backgroundimage.jpg')
+        }
+        .content{
+            width: 50%;
+            height: 222px;
+            background-color: var(--content-backcolor);
+            position: absolute;
+            border-radius:30px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) ;
+        
+        }
+        .main{
+            margin: 80px 50px 10px;
+        }
+        #icon-box {
+            background: rgb(68, 67, 67);
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform : translate(-50%,-50%)
+
+        }
+        .icon-box>i{
+            color: white;
+            position: relative;
+            top: 25%;
+            left: 32%;
+            font-size: 50px;
+        }
+        input{
+            height: 30px;
+            border: none;
+            width: 90%;
+            background-color: white;
+            color:#a8aebc;
+            padding-left: 35px;
+            border-radius: 5px;
+        }
+        input:focus
+        {
+            outline : none;
+        }
+        .form-group{
+
+            position: relative;         
+        }
+        .form-group>i{
+            width: 30px;
+            background-color: rgb(68, 67, 67);
+            height: 30px;
+            position: absolute;
+            left:0;
+            top:0;
+            color:white;
+            line-height: 31px;
+            text-align: center;
+            border-radius: 5px 0px 0px 5px;
+        }   
+        button{
+            width: 80%;
+            height: 30px;
+            position: absolute;
+            top : calc(92%);
+            left:12%;
+            color:white;
+            background-color: rgba(13, 2, 110);
+            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+                    from(rgb(0, 0, 0,0)), to(rgba(0, 0, 0, 1)));
+            border-radius: 0px 0px 15px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="main">
+            <div class="icon-box" id="icon-box">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Email ID" >
+                <i class="fa-solid fa-user"></i>
+           </div>  
+            <div class="form-group" style="margin-top:30px">
+                <input type="password" placeholder="Password">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        <button onclick="myFunction()" class="btn-login">Login</button>
+    </div>
+    
+    <script>
+        function myFunction() {
+
+            document.getElementById("icon-box").style.backgroundColor = "lightblue";            
+        }
+        </script>
+</body>
+</html>
